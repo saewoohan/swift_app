@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ucG-6M-hZI">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="1QU-SM-KrZ">
+            <objects>
+                <viewController id="ucG-6M-hZI" customClass="ViewController" customModule="GoogleMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="24r-TY-POX">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NM3-sY-9c5" customClass="GMSMapView">
+                                <rect key="frame" x="1" y="0.0" width="391" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZdF-ab-BgV">
+                                <rect key="frame" x="177" y="545" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8bq-iH-qcQ">
+                                <rect key="frame" x="175" y="239" width="43" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T0Y-0h-2no">
+                                <rect key="frame" x="160" y="395" width="72" height="62"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="icons8-google-maps-48"/>
+                                <connections>
+                                    <action selector="getCurrentPlace:" destination="ucG-6M-hZI" eventType="touchUpInside" id="3Ai-fI-lks"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bnm-5l-ZkH">
+                                <rect key="frame" x="1" y="40" width="391" height="99"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6uI-sE-SXE">
+                                        <rect key="frame" x="20" y="20" width="350" height="59"/>
+                                        <color key="backgroundColor" systemColor="labelColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-google-maps-48" translatesAutoresizingMaskIntoConstraints="NO" id="fes-vF-DUT">
+                                        <rect key="frame" x="30" y="32" width="36" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="여기서 검색" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oWK-Mh-WTJ">
+                                        <rect key="frame" x="74" y="38" width="185" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="6uI-sE-SXE" secondAttribute="bottom" constant="20" id="IXe-aJ-B0b"/>
+                                    <constraint firstItem="6uI-sE-SXE" firstAttribute="top" secondItem="Bnm-5l-ZkH" secondAttribute="top" constant="20" id="LSi-up-E9O"/>
+                                    <constraint firstItem="6uI-sE-SXE" firstAttribute="leading" secondItem="Bnm-5l-ZkH" secondAttribute="leading" constant="20" id="LlZ-ke-ful"/>
+                                    <constraint firstAttribute="trailing" secondItem="6uI-sE-SXE" secondAttribute="trailing" constant="21" id="ixT-5e-88p"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="EmQ-Je-afB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZdF-ab-BgV" firstAttribute="top" secondItem="T0Y-0h-2no" secondAttribute="bottom" constant="88" id="0cY-HI-sKg"/>
+                            <constraint firstItem="8bq-iH-qcQ" firstAttribute="top" secondItem="Bnm-5l-ZkH" secondAttribute="bottom" constant="100" id="1QZ-ls-XOP"/>
+                            <constraint firstItem="8bq-iH-qcQ" firstAttribute="leading" secondItem="EmQ-Je-afB" secondAttribute="leading" constant="175" id="9mJ-wM-4MI"/>
+                            <constraint firstItem="EmQ-Je-afB" firstAttribute="bottom" secondItem="Bnm-5l-ZkH" secondAttribute="bottom" constant="679" id="AO8-NL-Cim"/>
+                            <constraint firstItem="T0Y-0h-2no" firstAttribute="leading" secondItem="EmQ-Je-afB" secondAttribute="leading" constant="160" id="CyA-Iq-hVi"/>
+                            <constraint firstItem="EmQ-Je-afB" firstAttribute="trailing" secondItem="Bnm-5l-ZkH" secondAttribute="trailing" constant="1" id="H0o-aZ-iwX"/>
+                            <constraint firstItem="T0Y-0h-2no" firstAttribute="centerY" secondItem="24r-TY-POX" secondAttribute="centerY" id="LMT-b5-XBE"/>
+                            <constraint firstItem="Bnm-5l-ZkH" firstAttribute="top" secondItem="24r-TY-POX" secondAttribute="top" constant="40" id="Rap-lO-WcN"/>
+                            <constraint firstItem="8bq-iH-qcQ" firstAttribute="centerX" secondItem="NM3-sY-9c5" secondAttribute="centerX" id="Ub4-vT-5Vf"/>
+                            <constraint firstItem="NM3-sY-9c5" firstAttribute="trailing" secondItem="Bnm-5l-ZkH" secondAttribute="trailing" id="aDS-tX-dI0"/>
+                            <constraint firstItem="8bq-iH-qcQ" firstAttribute="centerX" secondItem="Bnm-5l-ZkH" secondAttribute="centerX" id="ctB-Me-0Xc"/>
+                            <constraint firstItem="T0Y-0h-2no" firstAttribute="centerY" secondItem="NM3-sY-9c5" secondAttribute="centerY" id="neg-Gm-LiG"/>
+                            <constraint firstItem="NM3-sY-9c5" firstAttribute="top" secondItem="24r-TY-POX" secondAttribute="topMargin" constant="-59" id="uV7-VJ-PKo"/>
+                            <constraint firstItem="ZdF-ab-BgV" firstAttribute="leading" secondItem="EmQ-Je-afB" secondAttribute="leading" constant="177" id="wbc-Wf-3EQ"/>
+                            <constraint firstItem="Bnm-5l-ZkH" firstAttribute="leading" secondItem="EmQ-Je-afB" secondAttribute="leading" constant="1" id="xve-gw-v1H"/>
+                            <constraint firstItem="8bq-iH-qcQ" firstAttribute="centerX" secondItem="T0Y-0h-2no" secondAttribute="centerX" id="yk8-Gc-cID"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addressLabel" destination="ZdF-ab-BgV" id="N3l-7z-wFz"/>
+                        <outlet property="buttonOutlet" destination="6uI-sE-SXE" id="bb5-Od-l7e"/>
+                        <outlet property="googleMap" destination="NM3-sY-9c5" id="hnF-QZ-mD2"/>
+                        <outlet property="nameLabel" destination="8bq-iH-qcQ" id="ZYO-z1-gZB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HJo-XH-PpH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1185" y="-271"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icons8-google-maps-48" width="48" height="48"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
